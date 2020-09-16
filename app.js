@@ -1,3 +1,5 @@
+const dbconfig = require("./config/db.config.js");
+
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -35,10 +37,10 @@ var mysql = require("mysql");
 //Database connection
 app.use(function(req, res, next) {
   res.locals.connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "course"
+    host: dbconfig.HOST,
+    user: dbconfig.USER,
+    password: dbconfig.PASSWORD,
+    database: dbconfig.DB
   });
   res.locals.connection.connect();
   next();
