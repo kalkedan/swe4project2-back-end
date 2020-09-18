@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 11, 2020 at 12:06 AM
+-- Generation Time: Sep 17, 2020 at 07:35 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -29,20 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
-  `COL 1` varchar(4) DEFAULT NULL,
-  `COL 2` varchar(13) DEFAULT NULL,
-  `COL 3` varchar(5) DEFAULT NULL,
-  `COL 4` varchar(5) DEFAULT NULL,
-  `COL 5` varchar(81) DEFAULT NULL,
-  `COL 6` varchar(1186) DEFAULT NULL
+  `dept` varchar(4) DEFAULT NULL,
+  `number` varchar(13) DEFAULT NULL,
+  `level` varchar(5) DEFAULT NULL,
+  `hours` varchar(5) DEFAULT NULL,
+  `name` varchar(81) DEFAULT NULL,
+  `description` varchar(1186) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
-(1, 'Dept', 'Course Number', 'Level', 'Hours', 'Name', 'Description'),
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (2, 'ACCT', 'ACCT-0010', '0', '0', 'Accounting Lower Division', ''),
 (3, 'ACCT', 'ACCT-0011', '0', '1', 'Accounting Lower Division', ''),
 (4, 'ACCT', 'ACCT-0012', '0', '2', 'Accounting Lower Division', ''),
@@ -247,9 +246,9 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (203, 'BIBL', 'BIBL-3022', '3', '2', 'Great Christian Doctrine', ''),
 (204, 'BIBL', 'BIBL-3023', '3', '3', 'Teaching the Bible', ''),
 (205, 'BIBL', 'BIBL-3032', '3', '2', 'Worship in the Early Church', ''),
-(206, 'BIBL', 'BIBL-3033', '3', '3', 'Mission Preparation', 'A course taught by one who has served as a missionary. The following subjects are treated: the New Testament concept of missions and missions today; a description of the work of a missionary; doctrinal preparation for the mission field; emotional preparation; spiritual preparation; preparing the supporting home church missionary cycle, entering the host country; communicating with the home church; effective missionary methods for various fields; maintaining physical, mental, emotional, social, and spiritual health in the mission field. Non-textual. Same as MISS-3013. This course is normally offered in the spring semester of odd numbered years.');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
-(207, 'BIBL', 'BIBL-3042', '3', '2', 'Parables of Jesus', 'A detailed study of the parables of Jesus emphasizing their message against their literary and historical backgrounds, especially their social and cultural context.'),
+(206, 'BIBL', 'BIBL-3033', '3', '3', 'Mission Preparation', 'A course taught by one who has served as a missionary. The following subjects are treated: the New Testament concept of missions and missions today; a description of the work of a missionary; doctrinal preparation for the mission field; emotional preparation; spiritual preparation; preparing the supporting home church missionary cycle, entering the host country; communicating with the home church; effective missionary methods for various fields; maintaining physical, mental, emotional, social, and spiritual health in the mission field. Non-textual. Same as MISS-3013. This course is normally offered in the spring semester of odd numbered years.'),
+(207, 'BIBL', 'BIBL-3042', '3', '2', 'Parables of Jesus', 'A detailed study of the parables of Jesus emphasizing their message against their literary and historical backgrounds, especially their social and cultural context.');
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (208, 'BIBL', 'BIBL-3043', '3', '3', 'Scripture and the Mission of God', 'The primary assumption of this course is that Christian Scripture witnesses to God who created the world, deeply cares for the world, is active in the world, and has a purpose for creation. In other words, the Bible witnesses to the God of missions. This course will explore a missional interpretation of scripture, or how to read scripture in light of the mission of God. It will also examine how the Biblical text bears witness to God\'s mission and how it calls and equips Christians and Christian communities to participate in God\'s mission.'),
 (209, 'BIBL', 'BIBL-3052', '3', '2', 'Women in the Old Testament', ''),
 (210, 'BIBL', 'BIBL-3053', '3', '3', 'Christianity and Culture', 'This course helps students to see that it was God\'s plan to bless the nations of the world through the culture of the church that is universally adaptable, but that universal culture needs to be distinguished from particular expressions of what it means to be God\'s church within any specific global context, including the student\'s own. This course is normally offered on a study abroad trip.'),
@@ -458,10 +457,10 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (413, 'BIOL', 'BIOL-3115', '3', '5', 'Human Anatomy', 'Prerequisites: Take either BIOL-2244 or BIOL-3224 with a B\" or better. Instructor permission required. A study of the gross anatomy of the body. Emphasis is given to the skeletal'),
 (414, 'BIOL', 'BIOL-3115L', '3', '0', 'Human Anatomy Lab', ''),
 (415, 'BIOL', 'BIOL-3122', '3', '2', 'Human Dissection Lab', ''),
-(416, 'BIOL', 'BIOL-3214', '3', '4', 'Environmental Health', 'Prerequisites: 3 hours biological or chemical science. An introductory course in environmental health encompassing a comprehensive survey of major environmental issues related to personal and community health, including population dynamics, environmental toxins, and environmental degradation. Integrated lecture/ Laboratory - 4 hours. This course is normally offered in the spring semester of even numbered years.');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+(416, 'BIOL', 'BIOL-3214', '3', '4', 'Environmental Health', 'Prerequisites: 3 hours biological or chemical science. An introductory course in environmental health encompassing a comprehensive survey of major environmental issues related to personal and community health, including population dynamics, environmental toxins, and environmental degradation. Integrated lecture/ Laboratory - 4 hours. This course is normally offered in the spring semester of even numbered years.'),
 (417, 'BIOL', 'BIOL-3223', '3', '3', 'General Embryology', 'Prerequisites: BIOL-2244 or BIOL-3115 with a grade of C\" or better. A study of processes required for normal human development'),
-(418, 'BIOL', 'BIOL-3224', '3', '4', 'Human Physiology', 'BIOL-1215 or BIOL-2244 with a C\" or better. A study of the human organism. Emphasis is given to the normal function'),
+(418, 'BIOL', 'BIOL-3224', '3', '4', 'Human Physiology', 'BIOL-1215 or BIOL-2244 with a C\" or better. A study of the human organism. Emphasis is given to the normal function');
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (419, 'BIOL', 'BIOL-3224L', '3', '0', 'Human Physiology Lab', ''),
 (420, 'BIOL', 'BIOL-3231', '3', '1', 'Exercise Physiology Lab', 'Prerequisites: BIOL-2244, BIOL-3224. Concurrent enrollment in BIOL-3233. This course provides students with the opportunity to use and experience various test and measurement equipment relevant to the exercise physiology field. Specifically, the equipment used will be to measure acute exercise responses and performance values pertaining to the following fitness components: Cardiovascular/cardiorespiratory, muscular strength, muscular endurance, flexibility, and body composition. Concurrent enrollment in BIOL 3233 is required. Same as NESP 3231. This class is normally offered in the spring semester.'),
 (421, 'BIOL', 'BIOL-3233', '3', '3', 'Exercise Physiology', 'Prerequisites: BIOL-2244, BIOL-3224. An in-depth examination of human physiology, at rest and during exercise. Areas of specific focus are the cardiovascular, cardiorespiratory, and muscular systems and how each manages the physiologic stress of exercise at various intensities. Other areas of attention are exercise physiology in the context of health and disease, training adaptation, and limitations to exercise tolerance. Same as NESP-3233. This class is normally offered in the spring semester.'),
@@ -718,13 +717,13 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (672, 'CLTR', 'CLTR-1301', '1', '1', 'Study Abroad - Latin America', 'This course is required for students participating in the Latin American study program. Students conduct initial research on the countries they will visit as part of the program and complete the necessary pre-departure preparation. This course is normally offered in the spring semester.'),
 (673, 'CLTR', 'CLTR-1303', '1', '3', 'Biblical Studies in English', ''),
 (674, 'CLTR', 'CLTR-1401', '1', '1', 'SS: Turkey Internship', ''),
-(675, 'CLTR', 'CLTR-1403', '1', '3', 'American Studies Seminar', '');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+(675, 'CLTR', 'CLTR-1403', '1', '3', 'American Studies Seminar', ''),
 (676, 'CLTR', 'CLTR-1413', '1', '3', 'Reading and Writing', ''),
 (677, 'CLTR', 'CLTR-1423', '1', '3', 'Communication', ''),
 (678, 'CLTR', 'CLTR-1433', '1', '3', 'Research and Presentation', ''),
 (679, 'CLTR', 'CLTR-1801', '1', '1', 'SS: Special Topics', ''),
-(680, 'CLTR', 'CLTR-2102', '2', '2', 'Language & Culture - Vienna', ''),
+(680, 'CLTR', 'CLTR-2102', '2', '2', 'Language & Culture - Vienna', '');
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (681, 'CLTR', 'CLTR-2103', '2', '3', 'Cross Cultural Perspectives', 'This course incorporates an interdisciplinary course to analyze the topics of identity and culture, while focusing on how these concepts interact within the context of a study abroad experience. Students will examine culture, history, politics, religion, art, and music to achieve a deeper understanding of civilization and culture through the lens of the study abroad location. For students on a study abroad trip.'),
 (682, 'CLTR', 'CLTR-2113', '2', '3', 'Conversational Japanese', ''),
 (683, 'CLTR', 'CLTR-2913', '2', '3', 'Western Arts and Culture', 'An analysis of the confluent events and expressions - historical, political, religious, philosophical, literary, artistic, and scientific - that shaped Western art, culture, and values. Important connections, interrelationships, and conversations among key texts, artistic works, historical events and interacting cultures. This course Is normally offered in the fall semester.'),
@@ -911,9 +910,9 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (864, 'COMM', 'COMM-0093', '0', '3', 'ESL Oral Communication', ''),
 (865, 'COMM', 'COMM-0193', '0', '3', 'Esl Commmunication in Public Envrionment', ''),
 (866, 'COMM', 'COMM-1111', '1', '1', 'Introduction to Communication', 'Exploring careers and introducing areas of Communication including journalism, sports journalism, public relations and advertising, public information positions, event planning, news producing, filmmaking, broadcasting, media production, corporate communication, leadership, etc.'),
-(867, 'COMM', 'COMM-1211', '1', '1', 'Intro to Electronic Media', 'Prerequisite: Communication, interdisciplinary studies, and undeclared majors only. Designed to introduce the first-time student to electronic media and Eagle broadcasting. This course is normally offered in the fall semester.');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
-(868, 'COMM', 'COMM-1213', '1', '3', 'Oral Communication', 'Study and practice of communication behavior in a variety of situations, focusing on interpersonal and public communication. Media literacy for presentations will also be included. This course is normally offered every semester.'),
+(867, 'COMM', 'COMM-1211', '1', '1', 'Intro to Electronic Media', 'Prerequisite: Communication, interdisciplinary studies, and undeclared majors only. Designed to introduce the first-time student to electronic media and Eagle broadcasting. This course is normally offered in the fall semester.'),
+(868, 'COMM', 'COMM-1213', '1', '3', 'Oral Communication', 'Study and practice of communication behavior in a variety of situations, focusing on interpersonal and public communication. Media literacy for presentations will also be included. This course is normally offered every semester.');
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (869, 'COMM', 'COMM-1311', '1', '1', 'Communication Practicum', 'For students completing 60 hours of formally structured on-campus experience in an area of Communication such as debate, drama, interpersonal or team experiences. Must be faculty directed and evaluated.'),
 (870, 'COMM', 'COMM-1321', '1', '1', 'Advanced Communication Practicum', 'Prerequisite: COMM-1411 or instructor consent. Requires 60 hours of backstage work in a faculty-approved campus theater production. This course is normally offered every semester.'),
 (871, 'COMM', 'COMM-1351', '1', '1', 'Media Practicum: Journalism', 'For those instructured on campus journalism experiences whether broadcast, print, or web. The course includes implementation and development of broadcasting skills and techniques. To receive credit, a student must work at least 60 hours. This course is normally offered every semester.'),
@@ -1122,7 +1121,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (1074, 'EDUC', 'EDUC-3014', '3', '4', 'Understanding Middle Level Students', ''),
 (1075, 'EDUC', 'EDUC-3083', '3', '3', 'Fundamentals of Classroom Management', 'Candidates will enhance knowledge and skills in behavior management theories based on discipline models which reflect current research. Candidates will make connections between effective classroom management and positive classroom climates. Candidates will enter into discussions of classroom management scenarios applying and analyzing best practices.'),
 (1076, 'EDUC', 'EDUC-3113', '3', '3', 'American Sign Language II', '');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (1077, 'EDUC', 'EDUC-3121', '3', '1', 'Orientation to Teacher Education', 'Prerequisites: ENGL-1113, grade of C or above, GPA 2.75. Corequisite: Concurrent enrollment in EDUC-3122. Practicum: 33 hours. Prospective candidates will be placed in a public school with a diverse student population to observe instructional classroom management and assessment strategies used by classroom teachers. Students will apply for admission to Teacher Education and will begin the Teacher Education Documentation Portfolio process required by Oklahoma. This course is normally offered every semester.'),
 (1078, 'EDUC', 'EDUC-3122', '3', '2', 'The School in American Culture', 'Prerequisites: ENGL-1113 grade of C or above, GPA 2.75. Corequisite: Concurrent enrollment in EDUC-3121. Prospective candidates will be able to explain the role and contributions of education in a democratic society and to state their personal philosophies of education. Emphasis is placed on history, philosophies, and current trends. Course must be completed with a grade of C or better to gain admission to Teacher Education. This course is normally offered every semester.'),
 (1079, 'EDUC', 'EDUC-3131', '3', '1', 'Classroom Management Strategies I', 'Prerequisites: Admission to student teaching; Overall GPA 2.75, Major GPA 3.0. Corequisite: Concurrent enrollment in EDUC-4133 and student teaching. Concurrent enrollment in practicum (recommended). Candidates will relate self-image and communications skills to classroom, parent, and colleague interaction. Emphasis is placed on warmth, empathy, and genuineness; cultural diversity issues will be strongly emphasized through participation and activites, guest speakers, and indepth study. Candidates will review behavior in classroom management theories in preparation for clinical practice. This course is normally offered every semester.'),
@@ -1353,7 +1352,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (1304, 'ENGL', 'ENGL-3833', '3', '3', 'Studies in C. S. Lewis', ''),
 (1305, 'ENGL', 'ENGL-3923', '3', '3', 'SS: English', ''),
 (1306, 'ENGL', 'ENGL-4103', '4', '3', 'Modern Drama', 'Prerequisite: ENGL-1213 with a grade of C\" or better. A study of major works');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (1307, 'ENGL', 'ENGL-4113', '4', '3', 'Studies in Chaucer', 'Prerequisite: ENGL-1213 with a grade of C\" or better. Non-majors by permission only. A detailed study of Chaucer\'s works and the modern criticism of Chaucer in the original Middle English. This course is normally offered as needed.\"'),
 (1308, 'ENGL', 'ENGL-4123', '4', '3', 'The Novels of Jane Austen', 'Prerequisite: ENGL-1213 and ENGL-2223. This English elective surveys Austen\'s six complete novels. It is a seminar style course that places Austen in her socio-cultural context and in the context of the Rise of the Novel. This course is offered as needed.'),
 (1309, 'ENGL', 'ENGL-4133', '4', '3', 'Studies in Tolkien', 'Prerequisite: ENGL-1213 and ENGL-2223. This English elective surveys Tolkien\'s major literary works. It is a seminar style course that places Tolkien in his socio-cultural, theological, and popluar context. This course is offered as needed.'),
@@ -1620,7 +1619,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (1570, 'FMST', 'FMST-3612', '3', '2', 'Adolescent Psychology', ''),
 (1571, 'FMST', 'FMST-3613', '3', '3', 'Adolescence & Early Adulthood', 'Prerequisite: PSYC-1113. This course covers the developmental process of adolescence and early adulthood. The course focuses on biological, cognitive, and socio-emotional issues as they pertain to the ongoing changes in this time of the life cycle. Attention will be given to issues of gender, culture, family relationships, peer relationships, sexuality, and education. Special attention will also be given to issues that young adults face as they venture into collegiate life, career exploration, and new family roles. Same as PSYC-3613. This course is normally offered in the fall semester of odd numbered years.'),
 (1572, 'FMST', 'FMST-3723', '3', '3', 'Gerontology', 'Prerequisite: FMST-1113. A study to include physical and health factors in aging; psychological aspects of aging; marriage, family, and community relationships of older persons; economic and vocational factors in aging; perspectives on death, dying, and grief; aging and institutional care; aging and the law; and the future of social intervention, both public and private. Same as PSYC-3723 and SOCI-3723. This course is normally offered every other spring semester.');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (1573, 'FMST', 'FMST-3913', '3', '3', 'Family Development', 'Prerequisite: FMST-1113. An introduction to the family development life cycle. The course will focus on the stages that marriages and families progress through and the associated tasks that need to be addressed and successfully negotiated. Attention will be given to dating, marriage, having children, children going to school, adolescence, empty nest, and issues of caretaking, grandparenting and aging. The course will also explore the related crises that develop around these developmental transition periods. This course is normally offered in the fall semester.'),
 (1574, 'FMST', 'FMST-3933', '3', '3', 'Cybernetics and Systems Theory', 'Prerequisite: FMST-1113. An introduction to the major underlying theoretical foundations of family therapy. The course will explore the historical development of systems theory and cybernetics from its origins in the 1940s in the thinking of mathematicians, physicists, biologists, and engineers to the pioneering work of Bateson and his colleagues in the late \'50s and their application of cybernetics to the family. The course will also introduce the work of Murray Bowen. The basic concepts of systems theory will be discussed and contrasted with the more common Western, analytical approach which has dominated the thinking in psychology since the time of Freud. Same as PSYC-3933. This course is normally offered in the fall semester of odd numbered years.'),
 (1575, 'FMST', 'FMST-4043', '4', '3', 'Family Policy', 'This course covers major areas of socily policy pertaining to families. Key legislation affecting families is highlighted.Emphasis is placed on providing opportunities for students to think critically and engage in discussions about trends and controversaries in family policy.'),
@@ -1857,7 +1856,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (1806, 'HIST', 'HIST-3423', '3', '3', 'American Indian History', 'History of American Indians in what is now the United States from pre-Columbian times to the present, exploring the cultural diversity among American Indians, tribal sovereignty, conflicts and accommodations with European Americans, and historical roots of contemporary Native American issues. This course is normally offered in the spring semester of odd numbered years.'),
 (1807, 'HIST', 'HIST-3443', '3', '3', 'African-American History to 1865', ''),
 (1808, 'HIST', 'HIST-3453', '3', '3', 'African-American History Since 1865', '');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (1809, 'HIST', 'HIST-3563', '3', '3', 'Nineteenth Century Europe 1789-1890', 'An examination of the social, economic, and political history of Europe from 1789 to the passing of Bismarck. Special emphasis is placed upon the French and Industrial Revolutions and their long-range effects. This course is normally offered every fifth semester.'),
 (1810, 'HIST', 'HIST-3583', '3', '3', 'Twentieth Century Europe, 1890-PRESENT', 'A study of the twentieth century and its dramatic developments, focusing especially on the challenges to liberalism embodied in the world wars, fascism, communism, and the Cold War. This course is normally offered every fifth semester.'),
 (1811, 'HIST', 'HIST-3713', '3', '3', 'American Religious History', 'A historical study of religion in America from the point of European contact to the present, with an emphasis on religious pluralism, church-state relations, theology, and cultural accommodation. Key topics include Puritanism, the Great Awakenings, evangelicalism, Catholicism, Mormonism, the Restoration Movement, the Social Gospel, Fundamentalism, and world religions in America. This course is normally offered in the spring semester of odd numbered years.'),
@@ -2122,7 +2121,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (2070, 'MATH', 'MATH-4801', '4', '1', 'SS: Spec Studies Mathematics', ''),
 (2071, 'MATH', 'MATH-4802', '4', '2', 'SS: Spec Studies Mathematics', ''),
 (2072, 'MATH', 'MATH-4803', '4', '3', 'SS: Spec Studies Mathematics', '');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (2073, 'MATH', 'MATH-4811', '4', '1', 'SS: Spec Studies Mathematics', 'Prerequisite: Senior standing. A seminar uniting the varied elements of the mathematics major. A written and oral presentation covering a current research topic in mathematics is required. This course is normally offered every semester.'),
 (2074, 'MATH', 'MATH-4812', '4', '2', 'SS: Spec Studies Mathematics', ''),
 (2075, 'MATH', 'MATH-4813', '4', '3', 'SS: Spec Studies Mathematics', ''),
@@ -2350,7 +2349,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (2297, 'MKTG', 'MKTG-4513', '4', '3', 'Marketing Research', 'Prerequisites: Junior standing. The study of marketing research theory and technique with special emphasis on the use of the scientific method. The course seeks to develop the student\'s analytical ability, to familiarize the student with the basic marketing research tools, and to develop the student\'s proficiency in the art of writing research reports. This course is normally offered in the fall semester.'),
 (2298, 'MKTG', 'MKTG-4613', '4', '3', 'Marketing Management', 'Prerequisite: Senior standing. A study of managerial aspects of the marketing function, emphasizing the qualitative criteria utilized in evaluating marketing alternatives. The course includes topics related to the decision-making process such as marketing research, product development, advertising and promotion, sales management, cost and demand analysis, competition, pricing, packaging, and forecasting. This course is normally offered in the spring semester.'),
 (2299, 'MKTG', 'MKTG-4713', '4', '3', 'Sales Management', '');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (2300, 'MKTG', 'MKTG-4723', '4', '3', 'Global Marketing', 'This course discusses the marketing of goods, services, and ideas in the context of a multinational environment. Same as INTL-4723. This course is normally offered in the spring semester.'),
 (2301, 'MKTG', 'MKTG-4801', '4', '1', 'SS: Special Studies Marketing', ''),
 (2302, 'MKTG', 'MKTG-4802', '4', '2', 'SS: Special Studies Marketing', ''),
@@ -2568,7 +2567,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (2514, 'NURS', 'NURS-1011', '1', '1', 'Introduction to Nursing', 'An introductory nursing course designed to acquaint the student with a historical nursing perspective from the beginnings of the profession to current professional developments. Students will be introduced to nursing trends and changing national and global health care delivery methods. Lecture - 1 hour. This course is normally offered in the fall semester.'),
 (2515, 'NURS', 'NURS-2003', '2', '3', 'Health Assessment', 'Prerequisites: BIOL-1013 Corequisite: BIOL-2523. Course focuses on the nursing process and how clinical diagnosis is performed. Students will learn to assess the client\'s physical, psychological, social, and spiritual dimensions as a foundation to nursing care. The skills of interviewing, documentation, inspection, percussion, palpation, and auscultation are refined to make clinical judgments and promote health/client outcomes. Lecture - 2 hours; Clinical - 1 hour. This course is normally offered in the fall semester.'),
 (2516, 'NURS', 'NURS-2003C', '2', 'C', 'Health Assesment Clinical', 'Heath Assesment Clinical');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (2517, 'NURS', 'NURS-2013', '2', '3', 'Fundamentals of Nursing', 'Prerequisites: BIOL-1013, CHEM-1104, BIOL-2523, NURS-2003 Corequisite: BIOL-2623. An introductory course emphasizing nursing skills and nursing process. Nursing theory and concepts related to the human response to illness will be explored. Emphasis is placed on the development and integration of therapeutic communication skills, nurse/client relationships, developmental needs, cultural diversity and legal/ethical issues. Lecture - 2 hours, Clinical - 1 hour. This course is normally offered in the spring semester.'),
 (2518, 'NURS', 'NURS-2013C', '2', 'C', 'Fund of Nursing Theory Clinical', ''),
 (2519, 'NURS', 'NURS-2023', '2', '3', 'Health Care Missions and Christian Service', ''),
@@ -2847,7 +2846,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (2792, 'RLED', 'RLED-4216', '4', '6', 'Intern:cross-Clt Comm I', ''),
 (2793, 'RLED', 'RLED-4222', '4', '2', 'Religious Education of Adults', 'A study of the age characteristics, motivational principles, learning methods and curriculum for teaching the Bible to adults. This course is normally offered in the fall semester of even numbered years.'),
 (2794, 'RLED', 'RLED-4226', '4', '6', 'Intern:cross-Clt Comm II', '');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (2795, 'RLED', 'RLED-4313', '4', '3', 'Recruiting and Training Volunteers', 'A course designed to assist churches in mobilizing volunteers to work with adolescents. Several programs used in churches currently will be reviewed and critiqued. Several aspects of volunteer programs will be discussed in detail (e.g., commitment, safety, legal issues, age, relieving volunteers, etc.). Interviews with volunteers in local churches will be used to understand from both sides the joys and frustrations involved in working with adolescents in a church setting. (Same as YTMN-4313.) This course is normally offered in the spring semester.'),
 (2796, 'RLED', 'RLED-4412', '4', '2', 'Special Issues in Children\'s Ministry', 'A focus on special issues in children?s ministry such as outreach programs (VBS, etc.), teacher burn-out, training, appreciation programs, programs for special needs students, and legal issues such as building security, screening of volunteers, and reporting abuse. This course is normally offered in the spring semester of odd numbered years.'),
 (2797, 'RLED', 'RLED-4712', '4', '2', 'Prc Exp Rel Ed 1', ''),
@@ -3146,7 +3145,7 @@ INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6
 (3090, 'YTMN', 'YTMN-2233', '2', '3', 'Experiential Teaching Methods in Outdoor Outdoors', 'An introduction to teaching adolescents using experiential teaching methods used in outdoor adventure learning. Emphasis will be given to the preparation and presentation of object lessons in the outdoors using biblical texts. Students will work in groups to plan and carry out a 2-3 day outdoor adventure. Interviews with camp directors and team building organizations will give students up-to-date experience in contemporary settings where adolescents might experience outdoor learning opportunities. This course is normally offered in the spring semester of even numbered years.'),
 (3091, 'YTMN', 'YTMN-3113', '3', '3', 'Evangelism, Discipleship, and Spiritual Formation With Adolescents', 'with Adolescents Students will study and explore methods of evangelism particularly effective with adolescents. One-on-one Bible studies, small group Bible studies, and large evangelistic group meetings will be evaluated for effectiveness in today\'s culture. Emphasis will be given to the process of spiritual formation within the family before and after the conversion experience. Methods of discipleship will be explored and practiced during the course. Students will develop a presentation of their own faith story and work on their own continuing spiritual formation. This course is normally offered in the fall semester of odd numbered years.'),
 (3092, 'YTMN', 'YTMN-3203', '3', '3', 'Family Based Youth Ministry', 'This course introduces the student to the current models of youth ministry and programming (i.e., PDYM, Cells, Relational, Young Life, FCA, Sonlife, K-Life). Philosophies of the different models will be discussed allowing the student to integrate a model(s) into his/her philosophy of ministry. Types of programming will be discussed that fit one or several of the models. Students will present a one-year program of activities and learning opportunities for adolescents using the student\'s chosen model and philosophy. Students will volunteer to work in a ministry that fits closely with the one(s) that they choose as a model. This course is normally offered in the fall semester of odd numbered years.');
-INSERT INTO `courses` (`id`, `COL 1`, `COL 2`, `COL 3`, `COL 4`, `COL 5`, `COL 6`) VALUES
+INSERT INTO `courses` (`id`, `dept`, `number`, `level`, `hours`, `name`, `description`) VALUES
 (3093, 'YTMN', 'YTMN-3213', '3', '3', 'Models & Programming in Youth Ministry', ''),
 (3094, 'YTMN', 'YTMN-3612', '3', '2', 'Spiritual Development of Children', 'A study of the spiritual development of children as it applies to both churches and parents. Study will focus on how Scripture, tradition, reason, and experience are connected in shaping a child?s spiritual development. Through reading, interviewing, and assignments students will learn first-hand how to better equip churches and parents to fulfill this role. (Same as RLED-3612.) This course is normally offered in the fall semester of even numbered years.'),
 (3095, 'YTMN', 'YTMN-4113', '4', '3', 'Adolescent Spirituality, Morality, & Culture', 'This course will provide information and learning experiences for students in the areas of adolescent spirituality, media influence, and overall cultural influences that affect the lives of adolescents. The course will focus on how a biblically-grounded spirituality can provide answers to the issues that adolescents face in our culture today. Fowler\'s Stages of Faith and research from The National Study of Youth and Religion will be used as a backdrop along with scripture to develop a working profile of adolescent spirituality. The use of audio and video media as well as the special moral problems of media and the effects media has on adolescents will be examined. This course is normally offered in the fall semester of even numbered years.'),
