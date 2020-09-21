@@ -3,11 +3,13 @@ var router = express.Router();
 
 function validate(courses) {
   var errorMessage = "[";
-
+  /* 
   if (courses.id == null || courses.id.length == 0) {
     errorMessage +=
       '{"attributeName":"id" , "message":"Must have id"}';
   }
+  */
+  
   if (courses.dept == null || courses.dept.length == 0) {
     if (errorMessage.length > 1) errorMessage += ",";
     errorMessage +=
@@ -43,8 +45,7 @@ router.get("/", function(req, res, next) {
   if (req.query.per_page == null) limit = 20;
   else limit = parseInt(req.query.per_page);
   res.locals.connection.query(
-    "SELECT * FROM courses LIMIT ? OFFSET ?",
-    [limit, offset],
+    "SELECT * FROM courses",
     function(error, results, fields) {
       if (error) {
         res.status(500);
